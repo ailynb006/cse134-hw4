@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+    --bg-color: #FFE2E2;
+    --card-bg: #FFF7F8;
+    --text-color: #4B3621;
+    --accent-color: #FE8CB7;
+    --border-color: #E8C5CD;
+    --font-heading: "Dancing Script", cursive, sans-serif;
+    --font-body: "Old Standard TT", sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 2.5em;
+    line-height: 1.6;
+}
+
+h1 {
+    color: var(--accent-color);
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    margin-bottom: 0.2em;
+}
+
+h2{
+    font-size: 1.8rem;
+    color: var(--text-color);
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 0.3em;
+    margin-top: 2rem;
+}
+
+h3{
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 2rem;
+    padding: 0;
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+}
+
+header nav ul > li a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.4em 0.8em;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+header nav ul > li a:hover, footer a:hover {
+    background-color: rgba(254, 140, 183, 0.4);
+}
+
+header nav ul > li a:focus, footer a:focus, input:focus, button:focus {
+    outline: 2px dashed var(--accent-color);
+    outline-offset: 4px;
+}
+
+a[target="_blank"] {
+    font-weight: bold;
+    color: #b0577a;
+    text-decoration: underline;
+}
+
+h1 + p {
+    font-size: 1.15rem;
+    font-style: italic;
+    background-color: var(--card-bg);
+    border: 1px dotted var(--border-color);
+    padding: 0.8em 1.2em;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+photo-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.2em;
+    display: block;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(254, 140, 183, 0.15);
+}
+
+photo-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 100px 100px 0 0;
+    margin-bottom: 0.8rem;
+}
+
+article {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5em;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(254, 140, 183, 0.1);
+}
+
+article figure picture img {
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+footer {
+    margin-top: 4rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.social-links p {
+    margin: 0.4rem 0;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 375px) {
+    body {
+        padding: 1em;
+    }
+    
+    header nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}

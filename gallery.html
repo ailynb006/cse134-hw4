@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Ailyn</title>
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+
+    <!-- Global Header & Navigation -->
+    <header>
+        <nav>
+            <ul style="list-style-type: none; padding: 0; display: flex; gap: 20px;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experiments.html">Exp</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <h1>Campus & Professional Gallery</h1>
+        <p>Moments from campus events, conferences, hackathons, and performances.</p>
+        
+        <!-- Custom Gallery Grid Component -->
+        <gallery-grid>
+            <photo-card
+                img-src="placeholder-ghc.jpg"
+                img-alt="Grace Hopper Celebration"
+                caption-text="GHC Conference">
+            </photo-card>
+            
+            <photo-card
+                img-src="placeholder-hackathon.jpg"
+                img-alt="Hackathon Event"
+                caption-text="Presenting Project">
+            </photo-card>
+
+            <photo-card
+                img-src="placeholder-opera.jpg"
+                img-alt="Opera Performance"
+                caption-text="Solo Debut">
+            </photo-card>
+
+            <photo-card
+                img-src="placeholder-wic.jpg"
+                img-alt="WIC Event"
+                caption-text="Undergraduate Women in Computing">
+            </photo-card>
+
+            <photo-card
+                img-src="placeholder-cafe.jpg"
+                img-alt="Homecafe Setup"
+                caption-text="Custom Matcha & Cold Foam Lab">
+            </photo-card>
+
+            <photo-card
+                img-src="placeholder-extra.jpg"
+                img-alt="Placeholder event"
+                caption-text="Future Event Placeholder">
+            </photo-card>
+        </gallery-grid>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <p><img src="github_logo.png" alt="GitHub Icon" width="16" style="vertical-align: middle;"> <a href="https://github.com/ailynb006" target="_blank">GitHub Profile Link</a></p>
+            <p><img src="vecteezy_linkedin-logo-png-linkedin-icon-transparent-png_18930585_835.png" alt="LinkedIn Icon" width="16" style="vertical-align: middle;"> <a href="https://www.linkedin.com/in/ailyn-becerra-2b09573a4" target="_blank">LinkedIn Profile Link</a></p>
+            <p><img src="Handshake_avatar_round.png" alt="Handshake Icon" width="16" style="vertical-align: middle;"> <a href="https://ucsd.joinhandshake.com/profiles/gqjea7" target="_blank">Handshake Profile Link</a></p>
+        </div>
+        <p>Made by Ailyn &lt;3</p>
+        <p><a href="#top">Back to Top</a></p>
+    </footer>
+
+    <script src="components.js"></script>
+</body>
+</html>

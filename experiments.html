@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiments - Ailyn</title>
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experiments.html">Exp</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>HTML Experimental Sandbox</h1>
+            <p>Testing advanced <strong>built-in browser capabilities</strong>, media streams, and dynamic templates.</p>
+        </section>
+
+        <section>
+            <h2>Media Elements</h2>
+            
+            <article>
+                <h3>Audio Player Experiment</h3>
+                <audio controls>
+                    <source src="sample-audio.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </article>
+
+            <article>
+                <h3>Video Player Experiment</h3>
+                <video controls width="320" height="240">
+                    <source src="sample-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </article>
+        </section>
+
+        <section>
+            <h2>Graphics &amp; Templates</h2>
+            
+            <article>
+                <h3>Canvas Element</h3>
+                <canvas id="experimentCanvas" width="300" height="150">
+                    Canvas rendering context not supported by your browser.
+                </canvas>
+            </article>
+
+            <article>
+                <h3>Template Element</h3>
+                <template id="project-row-template">
+                    <article>
+                        <h4>Template Item Title</h4>
+                        <p>Template description content loaded dynamically via script.</p>
+                    </article>
+                </template>
+                <p><em>(The above template remains dormant and hidden in the DOM until invoked by JavaScript.)</em></p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Extra Credit: MathML</h2>
+            <p>Rendering mathematical formulas natively using MathML markup:</p>
+            <math display="block">
+                <mrow>
+                    <mi>E</mi>
+                    <mo>=</mo>
+                    <mrow>
+                        <mi>m</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <msup>
+                            <mi>c</mi>
+                            <mn>2</mn>
+                        </msup>
+                    </mrow>
+                </mrow>
+            </math>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <p><img src="github_logo.png" alt="GitHub Icon" width="16" style="vertical-align: middle;"> <a href="https://github.com/ailynb006" target="_blank">GitHub Profile Link</a></p>
+            <p><img src="vecteezy_linkedin-logo-png-linkedin-icon-transparent-png_18930585_835.png" alt="LinkedIn Icon" width="16" style="vertical-align: middle;"> <a href="https://www.linkedin.com/in/ailyn-becerra-2b09573a4" target="_blank">LinkedIn Profile Link</a></p>
+            <p><img src="Handshake_avatar_round.png" alt="Handshake Icon" width="16" style="vertical-align: middle;"> <a href="https://ucsd.joinhandshake.com/profiles/gqjea7" target="_blank">Handshake Profile Link</a></p>
+        </div>
+        <p>Made by Ailyn &lt;3</p>
+        <p><a href="#top">Back to Top</a></p>
+    </footer>
+
+    <!-- Custom Elements Script -->
+    <script src="components.js"></script>
+</body>
+</html>
