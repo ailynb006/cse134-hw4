@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+body{
+    font-family: "Abril Fatface", sans-serif;
+    color: #1F2937;
+    background-image: url("cheese-pattern-background-3.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    line-height: 1.6;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1{
+    font-size: 18 px;
+    color: #1F2937;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 18px;
+    color:#C2410C;
+    font-weight: bold;
+    border-bottom: #FBBF24;
+    border-radius: 10px;
+    padding-bottom: 6px;
+    margin-top: 40px;
+    background-color:#FBBF24 ;
+
+}
+
+p{
+    color: #1F2937;
+    border-color: #C2410C;
+    background-color: #C2410C;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.latin{
+    font-style: italic;
+    color: #4A4E69;
+}
+
+#warning{
+    background-color: #C2410C;
+    color: #1F2937;
+    border-left: 4px solid;
+    border-color: #C2410C;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+blockquote{
+    border-left: 4px solid #1F2937;
+    margin: 24px 0;
+    padding: 12px 20px;
+    font-style: italic;
+    border-radius: 0 4px 4px 0;
+}
+
+fieldset{
+    border: 1px solid #C2410C;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #C2410C;
+}
+
+input[type="text"]{
+    padding: 8px 12px;
+    border: 1px solid #C2410C;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+    margin-top: 6px;
+}
+
+button[type="submit"]{
+    background-color: #FBBF24;
+    color:#1F2937;
+    border: none;
+    padding: 10px 18px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+a{
+    color: #4A4E69;
+    text-decoration: underline;
+}
+
+a:hover, button[type="submit"]:hover{
+    color: #4A4E69;
+    background-color: #FEF8E2;
+}
+
+a:focus, input:focus, button:focus{
+    outline: 3px solid #FEF8E2;
+    outline-offset: 2px;
+}
+
+dt {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #4E3B3B;
+    margin-top: 16px;
+}
+
+dt{
+    color: #1F2937;
+}
+
+dl{
+    display: grid;
+    grid-template-columns: max-content auto;
+    gap: 0.5rem 1.5rem;
+    align-items: baseline;
+    background-color: #C2410C;
+    border-radius: 10px;
+}
+
+legend{
+    background-color: #C2410C;
+    border-radius: 10px;
+}
