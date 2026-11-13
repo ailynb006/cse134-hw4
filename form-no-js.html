@@ -2,8 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form - Ailyn</title>
+  <link rel="stylesheet" href="styling.css">
 </head>
 <body>
-    <h1>Get in Touch</h1>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experiments.html">Exp</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="form-no-js.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+      <section>
+        <h1>Contact Me</h1>
+        <p>Please fill out the following form to get in touch &hearts;</p>
+        <form action="https://httpbin.org/post" method="post">
+          <fieldset>
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" id="firstName" autocomplete="given-name" minlength="1" maxlength="100" required>
+
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" id="lastName" autocomplete="family-name" minlength="1" maxlength="100" required>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" autocomplete="email" required>
+
+            <label for="comments">Leave A Message (10-1,000 characters)</label>
+            <textarea id="comments" name="comments" rows="5" cols="25" minlength="10" maxlength="1000" required></textarea>
+
+            <!--hidden bot field-->
+            <input type="hidden" name="possible_bot" value="true">
+
+            <!--submit button-->
+            <button type="submit">Submit</button>
+          </fieldset>
+        </form>
+
+      </section>
+    </main>
+    <footer>
+        <div class="social-links">
+            <p><img src="github_logo.png" alt="GitHub Icon" width="16" style="vertical-align: middle;"> <a href="https://github.com/ailynb006" target="_blank">GitHub Profile Link</a></p>
+            <p><img src="vecteezy_linkedin-logo-png-linkedin-icon-transparent-png_18930585_835.png" alt="LinkedIn Icon" width="16" style="vertical-align: middle;"> <a href="https://www.linkedin.com/in/ailyn-becerra-2b09573a4" target="_blank">LinkedIn Profile Link</a></p>
+            <p><img src="Handshake_avatar_round.png" alt="Handshake Icon" width="16" style="vertical-align: middle;"> <a href="https://ucsd.joinhandshake.com/profiles/gqjea7" target="_blank">Handshake Profile Link</a></p>
+        </div>
+        <p>Made by Ailyn &lt;3</p>
+        <p><a href="#top">Back to Top</a></p>
+    </footer>
+
+    <!-- Custom Elements Script -->
+    <script src="components.js"></script>
 </body>
+</html>
