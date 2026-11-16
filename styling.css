@@ -7,8 +7,20 @@
     --text-color: #4B3621;
     --accent-color: #FE8CB7;
     --border-color: #E8C5CD;
+    --shadow-color: #FFF2CC;
+    --link-color:#b0577a;
     --font-heading: "Dancing Script", cursive, sans-serif;
     --font-body: "Old Standard TT", sans-serif;
+}
+
+.darkmode{
+    --bg-color: #26161C;
+    --card-bg: #3B242D;
+    --text-color: #FCE8EF;
+    --accent-color: #FF9EBF;
+    --border-color: #5E3D48;
+    --shadow-color: #170C10;
+    --link-color:#FFB3CD;
 }
 
 body {
@@ -60,7 +72,7 @@ header nav ul > li a {
 }
 
 header nav ul > li a:hover, footer a:hover {
-    background-color: rgba(254, 140, 183, 0.4);
+    background-color: var(--shadow-color);
 }
 
 header nav ul > li a:focus, footer a:focus, input:focus, button:focus {
@@ -70,7 +82,7 @@ header nav ul > li a:focus, footer a:focus, input:focus, button:focus {
 
 a[target="_blank"] {
     font-weight: bold;
-    color: #b0577a;
+    color: var(--link-color);
     text-decoration: underline;
 }
 
@@ -99,7 +111,7 @@ photo-card {
     padding: 1.2em;
     display: block;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(254, 140, 183, 0.15);
+    box-shadow: 0 4px 12px var(--shadow-color);
 }
 
 photo-card img {
@@ -116,7 +128,7 @@ article {
     border-radius: 12px;
     padding: 1.5em;
     margin-bottom: 2rem;
-    box-shadow: 0 4px 12px rgba(254, 140, 183, 0.1);
+    box-shadow: 0 4px 12px var(--shadow-color);
 }
 
 article figure picture img {
@@ -252,4 +264,35 @@ label {
     border-color: var(--accent-color);
     color: var(--text-color);
     font-weight: bold;
+}
+
+/* part 4 theme switch button*/
+
+.js-loaded .js-required {
+    display: inline-block !important;
+}
+
+#theme-switch {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1.5px solid var(--border-color);
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px; /* pill shape */
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0 2px 6px var(--shadow-color);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+    margin-left: 1rem;
+    vertical-align: middle;
+}
+
+#theme-switch:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-1px);
+}
+
+#theme-switch:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
 }
