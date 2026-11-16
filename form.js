@@ -163,30 +163,46 @@ document.addEventListener("DOMContentLoaded", () => {
     //theme switch
     if (themeSwitch) {
         themeSwitch.addEventListener("click", () => {
-            try {
-                darkMode = localStorage.getItem("darkMode");
-            } catch (e) {
-                console.warn("localStorage is inaccessible:", e);
-            }
+            // Define the core theme-switching logic
+            const toggleThemeAction = () => {
+                try {
+                    darkMode = localStorage.getItem("darkMode");
+                } catch (e) {
+                    console.warn("localStorage is inaccessible:", e);
+                }
 
-            if (darkMode !== "active") {
-                //enable dark mode
-                document.body.classList.add("darkmode");
-                themeSwitch.setAttribute("aria-label", "Switch to light theme");
-                try {
-                    localStorage.setItem("darkMode", "active");
-                } catch (e) {
-                    console.warn("Could not save theme preference:", e);
+                if (darkMode !== "active") {
+                    //enable dark mode
+                    document.body.classList.add("darkmode");
+                    themeSwitch.setAttribute("aria-label", "Switch to light theme");
+                    try {
+                        localStorage.setItem("darkMode", "active");
+                    } catch (e) {
+                        console.warn("Could not save theme preference:", e);
+                    }
+                } else {
+                    //disable dark mode
+                    document.body.classList.remove("darkmode");
+                    themeSwitch.setAttribute("aria-label", "Switch to dark theme");
+                    try {
+                        localStorage.setItem("darkMode", null);
+                    } catch (e) {
+                        console.warn("Could not clear theme preference:", e);
+                    }
                 }
+            };
+
+            //check for reduced motion preferences or browser support
+            const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+            if (!document.startViewTransition || prefersReducedMotion) {
+                // run instantly without animation
+                toggleThemeAction();
             } else {
-                //disable dark mode
-                document.body.classList.remove("darkmode");
-                themeSwitch.setAttribute("aria-label", "Switch to dark theme");
-                try {
-                    localStorage.setItem("darkMode", null);
-                } catch (e) {
-                    console.warn("Could not clear theme preference:", e);
-                }
+                //animate the transition
+                document.startViewTransition(() => {
+                    toggleThemeAction();
+                });
             }
         });
     }

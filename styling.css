@@ -266,7 +266,7 @@ label {
     font-weight: bold;
 }
 
-/* part 4 theme switch button*/
+/* part 4.1 theme switch button*/
 
 .js-loaded .js-required {
     display: inline-block !important;
@@ -295,4 +295,13 @@ label {
 #theme-switch:focus-visible {
     outline: 2px solid var(--accent-color);
     outline-offset: 2px;
+}
+
+/* part 4.2 reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+    ::view-transition-old(*),
+    ::view-transition-new(*) {
+        animation: none !important;
+    }
 }
